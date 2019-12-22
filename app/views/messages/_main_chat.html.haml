@@ -1,0 +1,24 @@
+.chat-main
+  .main-header
+    .main-header__left-box
+      %h2.main-header__left-box__current-group
+        tia
+      %ul.main-header__left-box__member-list
+        member:
+        %li.main-header__left-box__member-list__member
+          cunn
+    =link_to "#" do
+      .main-header__edit-btn
+        edit
+  .messages
+
+  .form
+    .new-message
+      .input-box
+        %input{type: "text", class: "input-box__text", placeholder: "type a message"}
+        %label{class: "input-box__image"}
+          = icon('fas',  'image')
+          %input{type: "file",  class: "input-box__image__file"}
+      %input{type: "submit", class: "submit-btn"}
+                
+
