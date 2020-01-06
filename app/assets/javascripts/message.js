@@ -60,7 +60,6 @@ $(function(){
       };
   }
 $('#new_message').on('submit', function(e){
-  // console.log('hello');
 e.preventDefault();
 var formData = new FormData(this);
   var url = $(this).attr('action')
@@ -86,7 +85,7 @@ var formData = new FormData(this);
 
 var reloadMessages = function() {
   last_message_id = $('.message-list__index:last').data("message-id");
-  console.log(last_message_id);
+
   $.ajax({
     url: "api/messages",
     type: 'get',
