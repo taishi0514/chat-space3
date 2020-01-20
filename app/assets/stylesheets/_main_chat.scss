@@ -66,10 +66,11 @@
     width:100%;
     .new_message{
       display:flex;
+      width: 100%;
       .input-box{
         position:relative;
-        width:65vw;
-        // width:100%;
+        // width:65vw;
+        width:100%;
         display:flex;
         &__text{
           height:50px;
