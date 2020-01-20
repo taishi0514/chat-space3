@@ -84,8 +84,8 @@ var formData = new FormData(this);
   })
 
 var reloadMessages = function() {
-  last_message_id = $('.message-list__index:last').data("message-id");
-
+  last_message_id = $('.message:last').data("message-id");
+  console.log(last_message_id)
   $.ajax({
     url: "api/messages",
     type: 'get',
@@ -100,6 +100,8 @@ var reloadMessages = function() {
       });
       $('.messages').append(insertHTML);
       $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
+      $("#new_message")[0].reset();
+      $(".submit").prop("disabled", false);
     }
   })
   .fail(function() {
